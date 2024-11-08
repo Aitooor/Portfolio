@@ -1,0 +1,23 @@
+/* src/app/app.component.css */
+main {
+  margin-bottom: 4rem; /* Ajusta este valor según la altura del footer */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff4081;
+}

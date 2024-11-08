@@ -1,0 +1,10 @@
+/* src/app/footer/footer.component.css */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, #1e3a8a, #1e40af); /* Mismo gradiente de azul que el header */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
