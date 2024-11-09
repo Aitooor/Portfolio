@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
+import {HeaderVisibilityService} from '../header/service/header-visibility.service';
 
 @Component({
   selector: 'app-error',
   standalone: true,
   imports: [],
   templateUrl: './error.component.html',
-  styleUrl: './error.component.css'
+  styleUrls: ['./error.component.css']
 })
 export class ErrorComponent {
+  constructor(
+    private router: Router,
+    private headerVisibilityService: HeaderVisibilityService
+  ) {}
 
+  ngOnInit() {
+    this.headerVisibilityService.setShowHeader(false);
+  }
+
+  goHome() {
+    this.router.navigate(['/']).then(r => console.log(r));
+  }
 }
