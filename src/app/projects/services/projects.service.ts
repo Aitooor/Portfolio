@@ -25,7 +25,11 @@ export class ProjectsService {
     { id: 8, title: 'Project Eight', description: 'Description for project eight.', image: 'assets/images/project1.jpg' },
     { id: 9, title: 'Project Nine', description: 'Description for project nine.', image: 'assets/images/project1.jpg' },
     { id: 10, title: 'Project Ten', description: 'Description for project ten.', image: 'assets/images/project1.jpg' },
-    // Add more projects as needed
+    { id: 11, title: 'Project Eleven', description: 'Description for project eleven.', image: 'assets/images/project1.jpg' },
+    { id: 12, title: 'Project Twelve', description: 'Description for project twelve.', image: 'assets/images/project1.jpg' },
+    { id: 13, title: 'Project Thirteen', description: 'Description for project thirteen.', image: 'assets/images/project1.jpg' },
+    { id: 14, title: 'Project Fourteen', description: 'Description for project fourteen.', image: 'assets/images/project1.jpg' },
+    { id: 15, title: 'Project Fifteen', description: 'Description for project fifteen.', image: 'assets/images/project1.jpg' },
   ];
 
   getProjects(startIndex: number, limit: number): Observable<Project[]> {
