@@ -1,4 +1,3 @@
-// src/app/app.component.ts
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderVisibilityService } from './header/service/header-visibility.service';
@@ -16,10 +15,12 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'Aitor Arias Benéitez';
   showHeader = true;
+  showFooter = true;
 
   constructor(private headerVisibilityService: HeaderVisibilityService) {
     this.headerVisibilityService.showHeader$.subscribe(show => {
       this.showHeader = show;
+      this.showFooter = show;
     });
   }
 }
