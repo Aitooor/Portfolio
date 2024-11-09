@@ -5,8 +5,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { routes } from './app.routes';
 
 @NgModule({
-  declarations: [],
-  imports: [BrowserModule, RouterModule.forRoot(routes), MainPageComponent],
-  bootstrap: []
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    MainPageComponent
+  ],
+  providers: []
 })
 export class AppModule {}
