@@ -136,3 +136,43 @@
   font-size: 0.75rem;
   text-transform: uppercase;
 }
+
+.introduction-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem; /* Add space above the section */
+  text-align: center; /* Center the text */
+}
+
+.introduction-section .button-container {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 2rem; /* Add space above the buttons */
+}
+
+.introduction-section .view-more {
+  margin: 0;
+  padding: 0.75rem 1.25rem; /* Ajusta el padding para que coincida con el hover */
+  background: linear-gradient(to left, #1e3a8a, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.introduction-section .view-more:hover {
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.introduction-section h1 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+}
+
+.introduction-section p {
+  font-size: 1.2rem;
+  color: #333;
+}
