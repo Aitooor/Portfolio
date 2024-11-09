@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Router} from '@angular/router';
 import {HeaderVisibilityService} from '../header/service/header-visibility.service';
 
@@ -9,7 +9,7 @@ import {HeaderVisibilityService} from '../header/service/header-visibility.servi
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.css']
 })
-export class ErrorComponent {
+export class ErrorComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private headerVisibilityService: HeaderVisibilityService
@@ -17,6 +17,10 @@ export class ErrorComponent {
 
   ngOnInit() {
     this.headerVisibilityService.setShowHeader(false);
+  }
+
+  ngOnDestroy() {
+    this.headerVisibilityService.setShowHeader(true);
   }
 
   goHome() {
