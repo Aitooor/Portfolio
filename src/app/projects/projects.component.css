@@ -50,7 +50,7 @@
   margin-top: 0;
   font-size: 1.5rem;
   color: #fff;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 0.5rem;
   border-radius: 4px;
   text-align: center;
@@ -60,7 +60,7 @@
 
 .project-card p {
   font-size: 1rem;
-  color: #666;
+  color: #333; /* Darker text color for better contrast */
   background: rgba(255, 255, 255, 0.8);
   padding: 0.5rem;
   border-radius: 4px;
@@ -115,4 +115,20 @@
 
 .loading-container.loading {
   height: 100px; /* Height when loading */
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tech-badge {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
 }

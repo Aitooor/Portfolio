@@ -51,7 +51,7 @@
   margin-top: 0;
   font-size: 1.5rem;
   color: #fff; /* Change text color to white */
-  background: rgba(0, 0, 0, 0.6); /* Add semi-transparent black background */
+  background: rgba(0, 0, 0, 0.7); /* Add semi-transparent black background */
   padding: 0.5rem;
   border-radius: 4px;
   text-align: center; /* Center the text */
@@ -61,7 +61,7 @@
 
 .project-card p {
   font-size: 1rem;
-  color: #666;
+  color: #333; /* Darker text color for better contrast */
   background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente para el texto */
   padding: 0.5rem;
   border-radius: 4px;
@@ -103,4 +103,20 @@
   background: linear-gradient(to right, #1e3a8a, #2563eb); /* Darker blue gradient on hover */
   transform: translateY(-2px); /* Slight lift on hover */
   padding: 0.75rem 1.25rem; /* Increase padding to make the button larger */
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tech-badge {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
 }
