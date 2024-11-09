@@ -10,6 +10,7 @@
 </div>
 <div class="projects-section">
   <h2>My Projects</h2>
+  <button class="view-more" routerLink="/projects">See all the projects</button>
   <div class="projects-container">
     <div class="project-card" *ngFor="let project of projects" [style.backgroundImage]="'url(' + project.image + ')'">
       <h3>{{ project.title }}</h3>
@@ -25,5 +26,4 @@
       <button (click)="viewProject(project.id)">View Project</button>
     </div>
   </div>
-  <button class="view-more" routerLink="/projects">View More</button>
 </div>

@@ -88,21 +88,19 @@
 }
 
 .view-more {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem; /* Ajusta el padding para que sea consistente */
   background: linear-gradient(to left, #1e3a8a, #3b82f6); /* Blue gradient background */
   color: white; /* White text color */
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, padding 0.3s;
-  margin-bottom: 1.5rem; /* Space below the button to account for hover effect */
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 2.0rem; /* Space below the button to account for hover effect */
 }
 
 .view-more:hover {
   background: linear-gradient(to right, #1e3a8a, #2563eb); /* Darker blue gradient on hover */
   transform: translateY(-2px); /* Slight lift on hover */
-  padding: 0.75rem 1.25rem; /* Increase padding to make the button larger */
 }
 
 .technologies {
