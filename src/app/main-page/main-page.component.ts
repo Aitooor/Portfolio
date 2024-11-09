@@ -25,6 +25,6 @@ export class MainPageComponent implements OnInit {
   }
 
   viewProject(id: number) {
-    // Logic to view project details
+    console.log(`Viewing project with ID: ${id}`);
   }
 }
