@@ -1,0 +1,118 @@
+.projects-section {
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects-section h2 {
+  font-size: 4rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to left, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 400px;
+  height: 310px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  width: 90%;
+  align-self: center;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-top: auto;
+  text-align: center;
+}
+
+.project-card button {
+  align-self: center;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card button:hover {
+  background: linear-gradient(to left, #1e3a8a, #2563eb);
+  transform: translateY(-2px);
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #1e3a8a;
+  animation: spin 1s ease-in-out infinite;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0; /* Default height */
+  transition: height 0.3s ease; /* Smooth transition */
+}
+
+.loading-container.loading {
+  height: 100px; /* Height when loading */
+}

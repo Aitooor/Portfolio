@@ -13,11 +13,13 @@ import { ProjectsService, Project } from '../projects/services/projects.service'
 })
 export class MainPageComponent implements OnInit {
   projects: Project[] = [];
+  startIndex = 0;
+  limit = 5;
 
   constructor(private projectService: ProjectsService) {}
 
   ngOnInit() {
-    this.projectService.getProjects().subscribe((projects) => {
+    this.projectService.getProjects(this.startIndex, this.limit).subscribe((projects) => {
       this.projects = projects;
     });
   }
