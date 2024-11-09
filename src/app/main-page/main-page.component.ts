@@ -1,12 +1,28 @@
-import { Component } from '@angular/core';
+// src/app/main-page/main-page.component.ts
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ProjectsService, Project } from '../projects/services/projects.service';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.css'
+  styleUrls: ['./main-page.component.css']
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit {
+  projects: Project[] = [];
 
+  constructor(private projectService: ProjectsService) {}
+
+  ngOnInit() {
+    this.projectService.getProjects().subscribe((projects) => {
+      this.projects = projects;
+    });
+  }
+
+  viewProject(id: number) {
+    // Logic to view project details
+  }
 }
