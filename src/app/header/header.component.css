@@ -90,7 +90,22 @@
   transform: scale(1.2); /* Scale on hover when active */
 }
 
-@media (max-width: 768px) {
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  margin-right: 0.5rem; /* Espacio entre la imagen y el texto */
+}
+
+.logo-container span {
+  color: #ffffff; /* Color del texto */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+}
+
+@media (max-width: 900px) {
   .navbar {
     justify-content: space-between;
   }
@@ -118,5 +133,20 @@
 
   .menu-toggle {
     display: flex;
+  }
+
+  .logo-container {
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  .logo-container img {
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 0.5rem; /* Añade un margen inferior */
+  }
+
+  .logo-container span {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+    text-align: center; /* Centra el texto */
   }
 }
