@@ -1,11 +1,15 @@
-<!-- src/app/main-page/main-page.component.html -->
 <div class="projects-section">
   <h2>My Projects</h2>
   <div class="projects-container">
     <div class="project-card" *ngFor="let project of projects" [style.backgroundImage]="'url(' + project.image + ')'">
       <h3>{{ project.title }}</h3>
       <div class="technologies">
+        <p>Technologies</p>
         <span *ngFor="let tech of project.technologies" class="tech-badge">{{ tech }}</span>
+      </div>
+      <div class="positions">
+        <p>Position</p>
+        <span *ngFor="let pos of project.position" class="position-badge">{{ pos }}</span>
       </div>
       <p>{{ project.description }}</p>
       <button (click)="viewProject(project.id)">View Project</button>

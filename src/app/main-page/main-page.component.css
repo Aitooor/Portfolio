@@ -31,7 +31,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   width: 400px; /* Increase the width of the card */
-  height: 310px; /* Increase the height of the card to account for hover effect */
+  height: 400px; /* Increase the height of the card to account for hover effect */
   text-align: left;
   transition: transform 0.3s, box-shadow 0.3s;
   margin-bottom: 1.5rem; /* Space below each card to account for hover effect */
@@ -113,7 +113,23 @@
 }
 
 .tech-badge {
-  background-color: #1e3a8a;
+  background: linear-gradient(to left, #1e3a8a, #2563eb);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.positions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.position-badge {
+  background: linear-gradient(to left, gray, #4c4c4c);
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;

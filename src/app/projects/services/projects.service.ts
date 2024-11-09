@@ -9,6 +9,7 @@ export interface Project {
   description: string;
   image: string;
   technologies?: string[];
+  position?: string[];
 }
 
 @Injectable({
@@ -16,9 +17,30 @@ export interface Project {
 })
 export class ProjectsService {
   private projects: Project[] = [
-    { id: 1, title: 'Ignis', description: 'CEO of Hispanic Minecraft server(not affiliated with Microsoft/Mojang).', image: 'assets/images/project1.jpg', technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'] },
-    { id: 2, title: 'Nasgar', description: 'CEO of Multi language Minecraft server(not affiliated with Microsoft/Mojang).', image: 'assets/images/project1.jpg', technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'] },
-    { id: 3, title: 'This Portafolio', description: 'Simple Front-end to see my Back-end proyects.', image: 'assets/images/project1.jpg', technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'] },
+    {
+      id: 1,
+      title: 'Ignis',
+      description: 'CEO of Hispanic Minecraft server(not affiliated with Microsoft/Mojang).',
+      image: 'assets/images/project1.jpg',
+      technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'],
+      position: ['CEO', 'Developer', 'Configurator']
+    },
+    {
+      id: 2,
+      title: 'Nasgar',
+      description: 'CEO of Multi language Minecraft server(not affiliated with Microsoft/Mojang).',
+      image: 'assets/images/project1.jpg',
+      technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'],
+      position: ['CEO', 'Developer', 'Configurator']
+    },
+    {
+      id: 3,
+      title: 'This Portafolio',
+      description: 'Simple Front-end to see my Back-end proyects.',
+      image: 'assets/images/project1.jpg',
+      technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'],
+      position: ['Developer', 'Designer']
+    },
   ];
 
   getProjects(startIndex: number, limit: number): Observable<Project[]> {
