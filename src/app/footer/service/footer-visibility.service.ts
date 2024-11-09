@@ -1,4 +1,4 @@
-// src/app/header/service/header-visibility.service.ts
+// src/app/header/service/footer-visibility.service.ts
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 

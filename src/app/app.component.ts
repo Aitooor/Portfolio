@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderVisibilityService } from './header/service/header-visibility.service';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { CommonModule } from '@angular/common';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {HeaderVisibilityService} from './header/service/header-visibility.service';
+import {FooterVisibilityService} from './footer/service/footer-visibility.service';
+import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,15 @@ export class AppComponent {
   showHeader = true;
   showFooter = true;
 
-  constructor(private headerVisibilityService: HeaderVisibilityService) {
+  constructor(
+    private headerVisibilityService: HeaderVisibilityService,
+    private footerVisibilityService: FooterVisibilityService
+  ) {
     this.headerVisibilityService.showHeader$.subscribe(show => {
       this.showHeader = show;
+    });
+
+    this.footerVisibilityService.showFooter$.subscribe(show => {
       this.showFooter = show;
     });
   }
