@@ -1,29 +1,32 @@
-<div class="introduction-section">
-  <h1>Hello, I'm Aitor Arias Benéitez</h1>
-  <p>Developer passionate about technology and innovation.</p>
-  <p>I love learning new things and facing new challenges.</p>
-  <p>I am always looking for the best solution to problems.</p>
-  <div class="button-container">
-    <button class="introduction-button-left" routerLink="/contact">Contact me!</button>
-    <button class="introduction-button-right" routerLink="/about">About me!</button>
+<app-loading-screen *ngIf="isLoading"></app-loading-screen>
+<div *ngIf="!isLoading">
+  <div class="introduction-section">
+    <h1>Hello, I'm Aitor Arias Benéitez</h1>
+    <p>Developer passionate about technology and innovation.</p>
+    <p>I love learning new things and facing new challenges.</p>
+    <p>I am always looking for the best solution to problems.</p>
+    <div class="button-container">
+      <button class="introduction-button-left" routerLink="/contact">Contact me!</button>
+      <button class="introduction-button-right" routerLink="/about">About me!</button>
+    </div>
   </div>
-</div>
-<div class="projects-section">
-  <h2>My Projects</h2>
-  <button class="view-more" routerLink="/projects">See all the projects</button>
-  <div class="projects-container">
-    <div class="project-card" *ngFor="let project of projects" [style.backgroundImage]="'url(' + project.image + ')'">
-      <h3>{{ project.title }}</h3>
-      <div class="technologies">
-        <p>Technologies</p>
-        <span *ngFor="let tech of project.technologies" class="tech-badge">{{ tech }}</span>
+  <div class="projects-section">
+    <h2>My Projects</h2>
+    <button class="view-more" routerLink="/projects">See all the projects</button>
+    <div class="projects-container">
+      <div class="project-card" *ngFor="let project of projects" [style.backgroundImage]="'url(' + project.image + ')'">
+        <h3>{{ project.title }}</h3>
+        <div class="technologies">
+          <p>Technologies</p>
+          <span *ngFor="let tech of project.technologies" class="tech-badge">{{ tech }}</span>
+        </div>
+        <div class="positions">
+          <p>Position</p>
+          <span *ngFor="let pos of project.position" class="position-badge">{{ pos }}</span>
+        </div>
+        <p>{{ project.description }}</p>
+        <button (click)="viewProject(project.id)">View Project</button>
       </div>
-      <div class="positions">
-        <p>Position</p>
-        <span *ngFor="let pos of project.position" class="position-badge">{{ pos }}</span>
-      </div>
-      <p>{{ project.description }}</p>
-      <button (click)="viewProject(project.id)">View Project</button>
     </div>
   </div>
 </div>
