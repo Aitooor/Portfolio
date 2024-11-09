@@ -1,3 +1,4 @@
+// src/app/header/header.component.ts
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
@@ -8,4 +9,14 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink]
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  menuActive = false;
+
+  toggleMenu() {
+    this.menuActive = !this.menuActive;
+    const menuToggle = document.querySelector('.menu-toggle');
+    if (menuToggle) {
+      menuToggle.classList.toggle('active');
+    }
+  }
+}

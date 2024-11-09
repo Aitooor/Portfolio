@@ -1,12 +1,36 @@
 /* src/app/header/header.component.css */
 .navbar {
   display: flex;
-  align-items: center; /* Centra el contenido verticalmente */
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: linear-gradient(to right, #3b82f6, #1e3a8a);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.navbar img {
+  height: 40px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.navbar .nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -50px;
 }
 
 .nav-link {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -15,7 +39,85 @@
 }
 
 .nav-link:hover {
-  background-color: #3b82f6; /* Cambia el color de fondo al hacer hover */
-  color: #ffffff; /* Cambia el color del texto al hacer hover */
-  transform: scale(1.1); /* Aumenta el tamaño al hacer hover */
+  background-color: #3b82f6;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  right: 0;
+  width: 30px;
+  height: 25px;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-toggle:hover span {
+  background-color: #3b82f6;
+  transform: scale(1.2);
+}
+
+.menu-toggle.active {
+  transform: rotate(90deg);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle.active:hover span {
+  background-color: #ff6347; /* Change color on hover when active */
+  transform: scale(1.2); /* Scale on hover when active */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    transform: none;
+    margin-left: 0;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links a {
+    margin-top: 1rem;
+  }
+
+  .navbar .nav-links a:first-child {
+    margin-top: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }
