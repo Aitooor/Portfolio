@@ -56,3 +56,9 @@ button:hover {
   background: linear-gradient(to right, #1e3a8a, #2563eb);
   transform: translateY(-2px);
 }
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
