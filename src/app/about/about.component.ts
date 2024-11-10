@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  imports: [
+    NgForOf
+  ],
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  skills: string[] = ['JavaScript', 'TypeScript', 'Angular', 'CSS', 'HTML'];
+  hobbies: string[] = ['Reading', 'Traveling', 'Coding', 'Gaming'];
 }
