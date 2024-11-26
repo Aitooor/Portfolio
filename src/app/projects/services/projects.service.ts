@@ -21,7 +21,7 @@ export class ProjectsService {
       id: 1,
       title: 'Ignis',
       description: 'CEO of Hispanic Minecraft server(not affiliated with Microsoft/Mojang).',
-      image: 'assets/images/project1.jpg',
+      image: 'assets/images/ignis_logo.png',
       technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'],
       position: ['CEO', 'Developer', 'Configurator']
     },
@@ -29,18 +29,26 @@ export class ProjectsService {
       id: 2,
       title: 'Nasgar',
       description: 'CEO of Multi language Minecraft server(not affiliated with Microsoft/Mojang).',
-      image: 'assets/images/project1.jpg',
+      image: 'assets/images/nasgar_logo.png',
       technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'],
       position: ['CEO', 'Developer', 'Configurator']
     },
     {
       id: 3,
+      title: 'NoVPN',
+      description: 'Anti VPN SaaS for services/apps/games/etc.',
+      image: 'assets/images/novpn_logo.png',
+      technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'],
+      position: ['Developer', 'Designer']
+    },
+    {
+      id: 4,
       title: 'This Portafolio',
       description: 'Simple Front-end to see my Back-end proyects.',
       image: 'assets/images/project1.jpg',
       technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'],
       position: ['Developer', 'Designer']
-    },
+    }
   ];
 
   getProjects(startIndex: number, limit: number): Observable<Project[]> {
