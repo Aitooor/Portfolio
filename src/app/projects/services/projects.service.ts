@@ -39,7 +39,7 @@ export class ProjectsService {
       description: 'Anti VPN SaaS for services/apps/games/etc.',
       image: 'assets/images/novpn_logo.png',
       technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'],
-      position: ['CEO','Developer', 'Designer', 'System Administrator']
+      position: ['CEO','Developer', 'Designer', 'SysAdmin']
     },
     {
       id: 4,
