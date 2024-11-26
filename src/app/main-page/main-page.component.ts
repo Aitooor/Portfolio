@@ -15,7 +15,7 @@ import {LoadingScreenComponent} from '../loading-screen/loading-screen.component
 export class MainPageComponent implements OnInit, OnDestroy {
   projects: Project[] = [];
   startIndex = 0;
-  limit = 5;
+  limit = 3;
   isLoading = true;
 
   constructor(
