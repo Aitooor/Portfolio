@@ -45,7 +45,7 @@ export class ProjectsService {
       id: 4,
       title: 'This Portafolio',
       description: 'Simple Front-end to see my Back-end proyects.',
-      image: 'assets/images/project1.jpg',
+      image: 'assets/images/example_image.jpg',
       technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'],
       position: ['Developer', 'Designer']
     }
