@@ -21,7 +21,7 @@ export class ProjectsService {
       id: 1,
       title: 'Ignis',
       description: 'CEO of Hispanic Minecraft server(not affiliated with Microsoft/Mojang).',
-      image: 'assets/images/ignis_logo.png',
+      image: 'assets/images/logos/ignis/ignis_logo.png',
       technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'],
       position: ['CEO', 'Developer', 'Configurator']
     },
@@ -29,7 +29,7 @@ export class ProjectsService {
       id: 2,
       title: 'Nasgar',
       description: 'CEO of Multi language Minecraft server(not affiliated with Microsoft/Mojang).',
-      image: 'assets/images/nasgar_logo.png',
+      image: 'assets/images/logos/nasgar/nasgar_logo.png',
       technologies: ['Java', 'Minecraft', 'SpigotAPI', 'PapermcAPI', 'VelocityAPI'],
       position: ['CEO', 'Developer', 'Configurator']
     },
@@ -37,7 +37,7 @@ export class ProjectsService {
       id: 3,
       title: 'NoVPN',
       description: 'Anti VPN SaaS for services/apps/games/etc.',
-      image: 'assets/images/novpn_logo.png',
+      image: 'assets/images/logos/novpn/novpn_logo.png',
       technologies: ['HTML', 'CSS', 'TypeScript', 'Angular'],
       position: ['CEO','Developer', 'Designer', 'SysAdmin']
     },
