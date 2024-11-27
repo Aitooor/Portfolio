@@ -10,6 +10,8 @@ import { NgForOf } from '@angular/common';
   ],
   styleUrls: ['./about.component.css']
 })
+
+//TODO need to improve this at html and css
 export class AboutComponent {
   skills: string[] = [
     'Java', 'Kotlin', 'Spring',
